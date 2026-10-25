@@ -32,7 +32,7 @@
     <p id="heroDesc"></p>
     <div class="hero-actions">
       <button class="btn-watch">▶ Watch</button>
-      <span class="rating">IMDb Rating <span id="heroRating"></span> <i class="star">★</i></span>
+      <span class="rating"><span id="heroSource"></span> Rating <span id="heroRating"></span> <i class="star">★</i></span>
     </div>
   </div>
 </section>
@@ -98,7 +98,15 @@
   </form>
 </section>
 
-<footer><a class="logo" href="#home">CINEMA<b>HOME</b></a><small>Copyright © 2026 cinemahome</small></footer>
+<footer>
+  <a class="logo" href="#home">CINEMA<b>HOME</b></a>
+  <div class="credits">
+    <img src="assets/tmdb-logo.svg" alt="TMDB" height="12" onerror="this.remove()">
+    <p>This product uses the TMDB API but is not endorsed or certified by TMDB. Anime data from MyAnimeList via the unofficial Jikan API.</p>
+  </div>
+  <small>Copyright © 2026 cinemahome</small>
+  <small id="apiNote" role="status"></small>
+</footer>
 
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
