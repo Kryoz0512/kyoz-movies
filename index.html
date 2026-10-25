@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinema Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#home">CINEMA<b>HOME</b></a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#movies">MOVIES</a>
+    <a href="#series">TV SERIES</a>
+    <a href="#anime">ANIME</a>
+    <a href="#reviews">CONTACT US</a>
+  </nav>
+  <form class="search" onsubmit="return false">
+    <input type="search" id="searchInput" placeholder="Search movies or series" aria-label="Search">
+  </form>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-info">
+    <h1 id="heroTitle">AVATAR</h1>
+    <p id="heroDesc"></p>
+    <div class="hero-actions">
+      <button class="btn-watch">▶ Watch</button>
+      <span class="rating">IMDb Rating <span id="heroRating"></span> <i class="star">★</i></span>
+    </div>
+  </div>
+</section>
+
+<section class="thumbs" id="thumbs" aria-label="Featured"></section>
+
+<section class="banner" id="banner"><h2>STAR WARS</h2></section>
+
+<section class="row-section" id="movies">
+  <h3>TOP MOVIES</h3>
+  <div class="slider"><button class="arrow left" data-target="moviesRow" aria-label="Previous">‹</button>
+    <div class="row" id="moviesRow"></div>
+  <button class="arrow right" data-target="moviesRow" aria-label="Next">›</button></div>
+</section>
+
+<section class="row-section" id="series">
+  <h3>TOP TV SERIES</h3>
+  <div class="slider"><button class="arrow left" data-target="seriesRow" aria-label="Previous">‹</button>
+    <div class="row" id="seriesRow"></div>
+  <button class="arrow right" data-target="seriesRow" aria-label="Next">›</button></div>
+</section>
+
+<section class="row-section" id="anime">
+  <h3>TOP ANIME</h3>
+  <div class="slider"><button class="arrow left" data-target="animeRow" aria-label="Previous">‹</button>
+    <div class="row" id="animeRow"></div>
+  <button class="arrow right" data-target="animeRow" aria-label="Next">›</button></div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h3>USER REVIEWS</h3>
+  <div class="review-box">
+    <button class="arrow left" id="revPrev" aria-label="Previous review">‹</button>
+    <div class="review" id="reviewBody"></div>
+    <button class="arrow right" id="revNext" aria-label="Next review">›</button>
+  </div>
+</section>
+
+<section class="leave">
+  <h3>LEAVE REVIEWS</h3>
+  <form id="reviewForm" class="review-form">
+    <div class="col">
+      <label>Select Category
+        <select name="category" required>
+          <option value="">Movie or tv series</option>
+          <option>Movie</option><option>TV series</option>
+        </select></label>
+      <label>Select Name
+        <input name="title" placeholder="Movie or tv series" required></label>
+      <div class="rate">
+        <span>Select Rate</span>
+        <div class="stars" id="stars" role="radiogroup" aria-label="Rating">
+          <i data-v="1">★</i><i data-v="2">★</i><i data-v="3">★</i><i data-v="4">★</i><i data-v="5">★</i>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <label>Feedback
+        <textarea name="feedback" placeholder="Text here" required></textarea></label>
+      <button class="btn-submit" type="submit">SUBMIT</button>
+      <p id="formMsg" role="status"></p>
+    </div>
+  </form>
+</section>
+
+<footer><a class="logo" href="#home">CINEMA<b>HOME</b></a><small>Copyright © 2026 cinemahome</small></footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
